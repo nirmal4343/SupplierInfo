@@ -7,7 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SupplierMediator.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    
+    SupplierMediator *supplierMeaditor;
+    IBOutlet UITextField *name;
+    IBOutlet UITextField *phone;
+    IBOutlet UITextField *email;
+    UIActivityIndicatorView *proDialog;
+    NSMutableArray * itemList;
+}
+
+@property (nonatomic,retain) IBOutlet UITextField *name;
+@property (nonatomic,retain) IBOutlet UITextField *phone;
+@property (nonatomic,retain) IBOutlet UITextField *email;
+@property (nonatomic,retain) SupplierMediator *supplierMeaditor;
+@property (nonatomic,retain) NSMutableArray *itemList;
+@property (nonatomic,retain) UIActivityIndicatorView * proDialog;
+
+- (IBAction)submitSuppliersInfo:(id)sender;
+- (IBAction)viewSupplierInfo:(id)sender;
+- (void) setSupplierList:(NSMutableArray *) list;
 
 @end
+		
